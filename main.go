@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 var z = 43
+var f int // The zero value, assigns a 0 as a default value
 
 func main() {
 	// short declaration operator :=
@@ -14,6 +15,8 @@ func main() {
 	fmt.Println(z)
 
 	foo()
+
+	fmt.Println(f)
 }
 
 func foo() {
