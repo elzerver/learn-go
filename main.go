@@ -46,6 +46,15 @@ func main() {
 	fmt.Println(perrito)
 	// Print to see the type of the variable perrito
 	fmt.Printf("%T\n", perrito)
+
+
+	// Working with casting, in go is named as Conversion
+	// If i try to Convert the value of perrito into z it fails
+	// I need to Convert the value of perrito into int
+	z = int(perrito)
+	// The value of perrito is 23 ;)
+	fmt.Println(perrito)
+	fmt.Printf("%T\n", z)
 }
 
 func foo() {
