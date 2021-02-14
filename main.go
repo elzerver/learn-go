@@ -80,7 +80,26 @@ func main() {
 	fmt.Println(runtime.GOOS)
 	fmt.Println(runtime.GOARCH)
 
+    // Printing the ASCII and the hexadecimal of a string 
+	s := "Hellow playground"
+	fmt.Println(s)
+	fmt.Printf("%T\n", s)
 
+	// Print the value of each letter
+	bs := []byte(s)
+	fmt.Println(bs)
+	fmt.Printf("%T\n", bs)
+
+	// Iterate and print the %U# of each element
+	for i := 0; i < len(s); i++ {
+		fmt.Printf("%#U", s[i])
+	}
+
+	fmt.Println("")
+
+	for i, v := range s {
+		fmt.Printf("%#U \t %d", v, i)
+	}
 }
 
 func foo() {
