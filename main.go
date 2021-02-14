@@ -1,6 +1,8 @@
 package main
 
 import "fmt"
+// Importing the runtime package
+import "runtime"
 
 var z = 43
 var f int // The zero value, assigns a 0 as a default value
@@ -73,6 +75,12 @@ func main() {
 	fmt.Printf("%T\n", value1)
 	fmt.Println(value2)
 	fmt.Printf("%T\n", value2)
+
+	// Using the runtime package to see the architecture
+	fmt.Println(runtime.GOOS)
+	fmt.Println(runtime.GOARCH)
+
+
 }
 
 func foo() {
