@@ -100,6 +100,19 @@ func main() {
 	for i, v := range s {
 		fmt.Printf("%#U \t %d", v, i)
 	}
+
+	// How to print binary and hexadecimal values
+	character := "H"
+	fmt.Println(character)
+
+	bis := []byte(character)
+	fmt.Println(bis)
+
+	n := bis[0]
+	fmt.Println(n)
+	fmt.Printf("%T\n", n)
+	fmt.Printf("%b\n", n)
+	fmt.Printf("#%x\n", n)
 }
 
 func foo() {
