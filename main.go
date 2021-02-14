@@ -23,6 +23,12 @@ const (
 	cc string = "Jaime Papel Bond"
 )
 
+const (
+	aaa = iota
+	bbb = iota
+	ccc = iota
+)
+
 func main() {
 	// short declaration operator :=
 	x := 42
@@ -132,6 +138,15 @@ func main() {
 	fmt.Printf("%T\n", aa)
 	fmt.Printf("%T\n", bb)
 	fmt.Printf("%T\n", cc)
+
+	// Using iota
+
+	fmt.Println(aaa)
+	fmt.Println(bbb)
+	fmt.Println(ccc)
+	fmt.Printf("%T\n", aaa)
+	fmt.Printf("%T\n", bbb)
+	fmt.Printf("%T\n", ccc)
 }
 
 func foo() {
