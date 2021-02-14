@@ -16,6 +16,13 @@ var perrito hotdog
 var value1 int8
 var value2 int
 
+const (
+	perritos = 32
+	aa int = 42
+	bb float64 = 42.78
+	cc string = "Jaime Papel Bond"
+)
+
 func main() {
 	// short declaration operator :=
 	x := 42
@@ -113,6 +120,18 @@ func main() {
 	fmt.Printf("%T\n", n)
 	fmt.Printf("%b\n", n)
 	fmt.Printf("#%x\n", n)
+
+
+	// How does constants work on Go
+	fmt.Println(perritos)
+	fmt.Println(aa)
+	fmt.Println(bb)
+	fmt.Println(cc)
+
+	fmt.Printf("%T\n", perritos)
+	fmt.Printf("%T\n", aa)
+	fmt.Printf("%T\n", bb)
+	fmt.Printf("%T\n", cc)
 }
 
 func foo() {
