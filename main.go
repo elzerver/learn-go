@@ -10,6 +10,10 @@ type hotdog int
 // Asign a value using the type of hotdog
 var perrito hotdog
 
+// Define int8 value
+var value1 int8
+var value2 int
+
 func main() {
 	// short declaration operator :=
 	x := 42
@@ -55,6 +59,20 @@ func main() {
 	// The value of perrito is 23 ;)
 	fmt.Println(perrito)
 	fmt.Printf("%T\n", z)
+
+    
+    // Define the value types
+	// When you define a value as the following it throws an overflow
+	// on int8
+    // value1 = -129
+	value1 = -128
+	value2 = 10
+
+	// Printing unsigned and signed type of values
+	fmt.Println(value1)
+	fmt.Printf("%T\n", value1)
+	fmt.Println(value2)
+	fmt.Printf("%T\n", value2)
 }
 
 func foo() {
