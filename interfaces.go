@@ -6,7 +6,7 @@ import (
 
 type person struct {
 	first string
-	last string
+	last  string
 }
 type secretAgent struct {
 	person
@@ -14,13 +14,12 @@ type secretAgent struct {
 }
 
 func (s secretAgent) speak() {
- fmt.Println("I am ", s.first, s.last, "- The person speak")
+	fmt.Println("I am ", s.first, s.last, "- The secret Agent speak")
 }
 
 func (p person) speak() {
 	fmt.Println("I am ", p.first, p.last, "- The person speak")
-   }
-
+}
 
 type human interface {
 	speak()
@@ -29,16 +28,16 @@ type human interface {
 func bar(h human) {
 	fmt.Println("I was passed into bar", h)
 }
-func main(){
-	sa1 := secretAgent {
+func main() {
+	sa1 := secretAgent{
 		person: person{
 			first: "Rambo",
-			last: "Perez",
+			last:  "Perez",
 		},
 		ltk: true,
 	}
 
-	sa2 := secretAgent {
+	sa2 := secretAgent{
 		person: person{
 			"Miss",
 			"Moneypenny",
@@ -48,7 +47,7 @@ func main(){
 
 	p1 := person{
 		first: "Peter",
-		last: "Parker",
+		last:  "Parker",
 	}
 
 	fmt.Println(sa1)
