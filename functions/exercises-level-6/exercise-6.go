@@ -4,6 +4,11 @@ import "fmt"
 
 func main() {
 
-	fmt.Println("Hello wuold!")
+	defer fmt.Println("Hello wuold!")
+	func() {
+		fmt.Println("This is the anonymous function")
+	}()
+
+	fmt.Println("This is the second message at the end of the main")
 
 }
