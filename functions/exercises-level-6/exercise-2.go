@@ -23,7 +23,7 @@ func foo(values ...int) int {
 	return total
 }
 
-func bar(v ...int) int {
+func bar(v []int) int {
 	// fmt.Printf("%T\n", v)
 	var total int
 	total = foo(v...)
@@ -33,8 +33,9 @@ func bar(v ...int) int {
 
 func main() {
 	numbers := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
-	// foo(numbers...)
+	n := foo(numbers...)
+	fmt.Println(n)
 	var value int
-	value = bar(numbers...)
+	value = bar(numbers)
 	fmt.Println(value)
 }
