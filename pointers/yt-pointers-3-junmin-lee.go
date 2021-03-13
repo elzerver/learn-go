@@ -7,12 +7,13 @@ type person struct {
 	age  int
 }
 
-func initPerson() person {
+func initPerson() *person {
 	m := person{name: "noname", age: 50}
-	return m
+	fmt.Printf("initPerson --> %p\n", &m)
+	return &m
 }
 
 func main() {
-	fmt.Println("Hello playground!")
-	fmt.Println(initPerson())
+	// fmt.Println("Hello playground!")
+	fmt.Printf("main --> %p\n", initPerson())
 }
